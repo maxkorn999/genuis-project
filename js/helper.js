@@ -1,12 +1,13 @@
 // coloring func
-let isGreen = true;
+let changed = true;
+const initialBackgroundColor = window.getComputedStyle(document.body).backgroundColor;
 
 export function changeColour() { 
-    if (isGreen) {
+    if (changed) {
         this.style.background = "red";
+    } else { 
+        this.style.background = initialBackgroundColor;
     }
-    else { 
-        this.style.background = "white";
-    }
-    isGreen = !isGreen; // <== important
+
+    changed = !changed; // <== important
 }

@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>room101</title>
-</head>
-<body>
-    <p id="one"><b>Mind police is waiting for your sin...</b></p>
-    <p>Do you love Big Brother enough??</p>
-    
-    <!-- <script>alert('fuck off!')</script> -->
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: grid;
+            justify-content: center;
+            align-items: center;
 
-    <label>
-        <p>Enter number</p>
-        <input type="number" name="number">
-        <button>Go!</button>
-    </label>
+            background-image: url('./backgound_grey.jpeg'); /* Відносний шлях до картинки */
+            background-size: cover; /* Масштабування картинки для покриття всього екрану */
+            background-position: center; /* Центрування картинки */
+            background-repeat: no-repeat; /* Заборона повторення картинки */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .clickable {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="one" class="clickable"><b>Mind police is waiting for your sin...</b></p>
+        <label>
+            <p>Enter number:</p>
+            <input type="number" name="number">
+            <button>Go!</button>
+        </label>
+    </div>
     <script type="module" src="./js/script.js"></script>
 </body>
+
 </html>
