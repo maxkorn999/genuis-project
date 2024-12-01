@@ -1,13 +1,6 @@
-import { changeColour } from './helper.js';
+import { changeColour, getRandomWords } from './helper.js';
 
-document.querySelector('#one').onclick = changeColour;
+document.querySelector('#updateYourBrain').onclick = changeColour;
 
-
-// input field
-const numRef = document.querySelector('input[type="number"]');
-// console.log(numRef);
-
-
-const btnRef = document.querySelector('button');
-btnRef.addEventListener('click', () => console.log(numRef.value));
+document.querySelector('#generateWords').onclick = getRandomWords;
 

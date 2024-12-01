@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>room101</title>
+    <title>repeater</title>
     <style>
         body,
         html {
@@ -31,18 +31,20 @@
             cursor: pointer;
         }
     </style>
+    <link rel="icon" href="fav2.png">
 </head>
 
 <body>
     <div class="container">
-        <p id="one" class="clickable"><b>Mind police is waiting for your sin...</b></p>
+        <p id="updateYourBrain" class="clickable"><b>update your brain</b></p>
         <label>
-            <p>Enter number:</p>
-            <input type="number" name="number">
-            <button>Go!</button>
+            <input type="number" placeholder="enter number">
+            <button id="generateWords">repeat words</button>
+            <ul id="output"></ul>
         </label>
     </div>
     <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/words.js"></script>
 </body>
 
 </html>
