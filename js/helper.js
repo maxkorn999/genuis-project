@@ -1,4 +1,4 @@
-import { words } from './words.js';
+import { words } from './spanishWords.js';
 
 // coloring func
 let changed = true;
@@ -15,7 +15,6 @@ export function changeColour() {
 }
 
 // random words func
-
 export function getRandomWords() { 
   // Отримуємо введене користувачем число
   const count = parseInt(document.querySelector("[placeholder='enter number']").value, 10);
@@ -46,7 +45,30 @@ export function getRandomWords() {
   // Формуємо список результатів
   const output = document.getElementById("output");
   output.innerHTML = "<h4>result:</h4>";
-  output.innerHTML += randomPairs
-    .map(([english, ukrainian]) => `<li>${english} - ${ukrainian}</li>`)
-    .join("");
+
+  randomPairs.forEach(([english, ukrainian]) => {
+    // Створюємо елемент <button> для кожного англійського слова
+    const button = document.createElement('button');
+    button.textContent = english;
+
+    // Додаємо обробник події для кнопки
+    button.addEventListener('click', () => {
+      showTranslation(english, ukrainian);
+    });
+
+    // Додаємо кнопку до контейнера
+    const li = document.createElement('li');
+    li.appendChild(button);
+    output.appendChild(li);
+  });
+}
+
+// Функція для показу перекладу при кліку на слово
+function showTranslation(english, ukrainian) {
+  const output = document.getElementById("output");
+
+  // Додаємо переклад під словом
+  const translationParagraph = document.createElement('p');
+  translationParagraph.innerHTML = `<strong>${english}</strong> - ${ukrainian}`;
+  output.appendChild(translationParagraph);
 }
