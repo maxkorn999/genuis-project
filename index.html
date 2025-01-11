@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>repeater</title>
     <style>
-        body {
-            overflow-x: hidden;
-        }
-        html {
+        body, html {
             height: 100%;
-            width: 100%;
             overflow-x: hidden;
             margin: 0;
+            padding: 0;
             display: grid;
             justify-content: center;
             align-items: center;
@@ -21,7 +18,7 @@
             background-image: url('./backgound_grey.jpeg'); /* Відносний шлях до картинки */
             background-size: cover; /* Масштабування картинки для покриття всього екрану */
             background-position: center; /* Центрування картинки */
-            background-repeat: no-repeat; /* Заборона повторення картинки */
+            background-repeat: repeat-y; /* Заборона повторення картинки */
         }
 
         .container {
@@ -33,6 +30,11 @@
 
         .clickable {
             cursor: pointer;
+        }
+
+        #output {
+            margin-top: 0; /* Переконайтеся, що контейнер не має зайвих відступів */
+            padding-top: 0;
         }
     </style>
     <link rel="icon" href="fav2.png">
