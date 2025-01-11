@@ -1,5 +1,5 @@
 export const words = {
-  apple: "яблуко",
+  apple: "яблукоp",
   banana: "банан",
   cherry: "вишня",
   date: "фінік",
